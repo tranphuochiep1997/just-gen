@@ -1,6 +1,6 @@
 {
   "name": "just-gen",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Tool using npm to generate Controller, Service, Repository, Entity, Dto, Mapper boilerplate for Spring Boot web",
   "main": "index.js",
   "bin": "index.js",
@@ -16,5 +16,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tranphuochiep1997/just-gen.git"
+  },
+  "dependencies": {
+    "oracledb": "^6.5.1"
   }
 }
