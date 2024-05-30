@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const replaceTemplate = require('./replaceTemplateContent');
 
 module.exports = function genFileFromTemplate(fileCategoryName, templateFilePath, destinationFilePath, basePackageName, entityName) {
@@ -9,7 +10,7 @@ module.exports = function genFileFromTemplate(fileCategoryName, templateFilePath
         } else if (err.code === 'ENOENT') {
             // file does not exist
             // Read the template
-            fs.readFile(templateFilePath, 'utf-8', (err, data) => {
+            fs.readFile(path.resolve(__dirname, templateFilePath), 'utf-8', (err, data) => {
                 if (err) {
                     console.error(err);
                     return;

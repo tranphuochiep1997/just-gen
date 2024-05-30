@@ -6,7 +6,7 @@ module.exports = function genServiceImpl(baseFolder, basePackageName, entityName
     // ServiceImpl
     const serviceImplDir = `${baseFolder}/service/impl`;
     const destinationFile = `${serviceImplDir}/${entityName}ServiceImpl.java`;
-    const templateFile = './template/serviceImpl.java';
+    const templateFile = '../template/serviceImpl.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(serviceImplDir)) {
         fs.mkdirSync(serviceImplDir);

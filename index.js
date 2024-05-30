@@ -18,6 +18,14 @@ if (!fs.existsSync(baseFolder)) {
     throw Error(`baseFolder ${baseFolder} không tồn tại!`);
 }
 
+// // Connection string
+// const dbConfig = {
+//     user: 'your_username',
+//     password: 'your_password',
+//     connectString: 'your_connect_string' // Host:Port/ServiceName
+// };
+
+  
 genController(baseFolder, packageName, entityName);
 genService(baseFolder, packageName, entityName);
 genRepository(baseFolder, packageName, entityName);

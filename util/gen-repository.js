@@ -6,7 +6,7 @@ module.exports = function genRepository(baseFolder, basePackageName, entityName)
     // Repository
     const repositoryDir = `${baseFolder}/repository`;
     const destinationFile = `${repositoryDir}/${entityName}Repository.java`;
-    const templateFile = './template/repository.java';
+    const templateFile = '../template/repository.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(repositoryDir)) {
         fs.mkdirSync(repositoryDir);

@@ -25,7 +25,7 @@ v8.16.0
 ```
 2. Run command gencode
 ```
-npx just-gen
+npx just-gen@latest
 ```
 
 ### Output

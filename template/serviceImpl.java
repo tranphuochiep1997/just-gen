@@ -16,7 +16,7 @@ import ${basePackageName}.service.${entityName}Service;
 public class ${entityName}ServiceImpl implements ${entityName}Service {
 	
 	private final ${entityName}Repository ${entityNameLowerCase}Repository;
-		private final ${entityName}Mapper ${entityNameLowerCase}Mapper;
+	private final ${entityName}Mapper ${entityNameLowerCase}Mapper;
 
 	@Autowired
 	public ${entityName}ServiceImpl(${entityName}Repository ${entityNameLowerCase}Repository, ${entityName}Mapper ${entityNameLowerCase}Mapper) {

@@ -6,7 +6,7 @@ module.exports = function genService(baseFolder, basePackageName, entityName) {
     // Service
     const serviceDir = `${baseFolder}/service`;
     const destinationFile = `${serviceDir}/${entityName}Service.java`;
-    const templateFile = './template/service.java';
+    const templateFile = '../template/service.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(serviceDir)) {
         fs.mkdirSync(serviceDir);

@@ -6,7 +6,7 @@ module.exports = function genDto(baseFolder, basePackageName, entityName) {
     // Dto
     const dtoDir = `${baseFolder}/dto`;
     const destinationFile = `${dtoDir}/${entityName}Dto.java`;
-    const templateFile = './template/dto.java';
+    const templateFile = '../template/dto.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(dtoDir)) {
         fs.mkdirSync(dtoDir);

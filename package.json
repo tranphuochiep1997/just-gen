@@ -1,6 +1,6 @@
 {
   "name": "just-gen",
-  "version": "1.0.4",
+  "version": "1.0.10",
   "description": "Tool using npm to generate Controller, Service, Repository, Entity, Dto, Mapper boilerplate for Spring Boot web",
   "main": "index.js",
   "bin": "index.js",
@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "template/*"
+    "template/*.java",
+    "util/*"
   ],
   "author": "Hip",
   "license": "ISC",

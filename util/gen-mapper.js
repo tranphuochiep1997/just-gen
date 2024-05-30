@@ -6,7 +6,7 @@ module.exports = function genMapper(baseFolder, basePackageName, entityName) {
     // Mapper
     const mapperDir = `${baseFolder}/mapper`;
     const destinationFile = `${mapperDir}/${entityName}Mapper.java`;
-    const templateFile = './template/mapper.java';
+    const templateFile = '../template/mapper.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(mapperDir)) {
         fs.mkdirSync(mapperDir);

@@ -6,7 +6,7 @@ module.exports = function genEntity(baseFolder, basePackageName, entityName) {
     // Entity
     const entityDir = `${baseFolder}/entity`;
     const destinationFile = `${entityDir}/${entityName}Entity.java`;
-    const templateFile = './template/entity.java';
+    const templateFile = '../template/entity.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(entityDir)) {
         fs.mkdirSync(entityDir);
