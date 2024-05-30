@@ -46,6 +46,8 @@ npx just-gen
 |   │   │   │   │   │   │       └── UserServiceImpl.java
 |   │   │   │   │   │   ├── repository
 |   │   │   │   │   │   │   └── UserRepository.java
+|   │   │   │   │   │   ├── mapper
+|   │   │   │   │   │   │   └── UserMapper.java
 |   │   │   │   │   │   ├── entity
 |   │   │   │   │   │   │   └── User.java
 |   │   │   │   │   │   └── dto
