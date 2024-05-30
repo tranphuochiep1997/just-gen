@@ -9,7 +9,7 @@ module.exports = function genServiceImpl(baseFolder, basePackageName, entityName
     const templateFile = '../template/serviceImpl.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(serviceImplDir)) {
-        fs.mkdirSync(serviceImplDir);
+        fs.mkdirSync(serviceImplDir, { recursive: true });
     }
     genFileFromTemplate(fileCategoryName, templateFile, destinationFile, basePackageName, entityName);
 }

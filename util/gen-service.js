@@ -9,7 +9,7 @@ module.exports = function genService(baseFolder, basePackageName, entityName) {
     const templateFile = '../template/service.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(serviceDir)) {
-        fs.mkdirSync(serviceDir);
+        fs.mkdirSync(serviceDir, { recursive: true });
     }
     genFileFromTemplate(fileCategoryName, templateFile, destinationFile, basePackageName, entityName);
 }

@@ -6,7 +6,7 @@ const oracledb = require('oracledb');
 //   password: 'your_password',
 //   connectString: 'your_connect_string' // Host:Port/ServiceName
 // };
-export async function getTableColumns(dbConfig, tableName) {
+module.exports = async function getTableColumns(dbConfig, tableName) {
   let connection;
 
   try {
@@ -15,7 +15,7 @@ export async function getTableColumns(dbConfig, tableName) {
 
     // Query to get the columns of the specified table
     const query = `
-      SELECT COLUMN_NAME
+      SELECT COLUMN_NAME, DATA_TYPE
       FROM USER_TAB_COLUMNS
       WHERE TABLE_NAME = :tableName
     `;
@@ -24,11 +24,14 @@ export async function getTableColumns(dbConfig, tableName) {
     const result = await connection.execute(query, [tableName]);
 
     // Extract column names from the query result
-    const columns = result.rows.map(row => row[0]);
-
-    console.log('Columns:', columns);
+    const columns = result.rows.map(row => ({
+      name: row[0],
+      dataType: row[1]
+    }));
+    return columns;
   } catch (error) {
     console.error('Error getting table columns:', error);
+    throw error;
   } finally {
     // Release the connection
     if (connection) {
@@ -36,6 +39,7 @@ export async function getTableColumns(dbConfig, tableName) {
         await connection.close();
       } catch (error) {
         console.error('Error closing connection:', error);
+        throw error;
       }
     }
   }

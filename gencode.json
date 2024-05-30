@@ -1,5 +1,12 @@
 {
-    "baseFolder": "./src/main/java/com/example/demo",
-    "packageName": "com.example.com",
-    "entityName": "Product"
+    "baseFolder": "./src/main/java",
+    "packageName": "com.example.demo",
+    "entityName": "Product",
+    "tableName": "product",
+    "enableDBConnect": true,
+    "dbConfig": {
+        "connectString": "10.30.176.17:1521/orcl",
+        "user": "c##test",
+        "password": "test"
+    }
 }

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const replaceTemplate = require('./replaceTemplateContent');
 
-module.exports = function genFileFromTemplate(fileCategoryName, templateFilePath, destinationFilePath, basePackageName, entityName) {
+module.exports = function genFileFromTemplate(fileCategoryName, templateFilePath, destinationFilePath, basePackageName, entityName, tableName, entityPropertiesContent, entityImportContent) {
     // Đọc file
     fs.stat(destinationFilePath, function(err, stat) {
         if (err == null) {
@@ -15,7 +15,7 @@ module.exports = function genFileFromTemplate(fileCategoryName, templateFilePath
                     console.error(err);
                     return;
                 }
-                const fileContent = replaceTemplate(data, basePackageName, entityName);
+                const fileContent = replaceTemplate(data, basePackageName, entityName, tableName, entityPropertiesContent, entityImportContent);
                 fs.writeFile(destinationFilePath, fileContent, (err) => {
                     if (err) console.log(err);
                     console.log(`Successfully create ${fileCategoryName}`);

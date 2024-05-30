@@ -9,7 +9,7 @@ module.exports = function genMapper(baseFolder, basePackageName, entityName) {
     const templateFile = '../template/mapper.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(mapperDir)) {
-        fs.mkdirSync(mapperDir);
+        fs.mkdirSync(mapperDir, { recursive: true });
     }
     genFileFromTemplate(fileCategoryName, templateFile, destinationFile, basePackageName, entityName);
 }

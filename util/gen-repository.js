@@ -9,7 +9,7 @@ module.exports = function genRepository(baseFolder, basePackageName, entityName)
     const templateFile = '../template/repository.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(repositoryDir)) {
-        fs.mkdirSync(repositoryDir);
+        fs.mkdirSync(repositoryDir, { recursive: true });
     }
     genFileFromTemplate(fileCategoryName, templateFile, destinationFile, basePackageName, entityName);
 }

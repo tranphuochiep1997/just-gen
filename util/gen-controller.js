@@ -9,7 +9,7 @@ module.exports = function genController(baseFolder, basePackageName, entityName)
     const templateFile = '../template/controller.java';
     // Tạo folder nếu chưa tồn tại
     if (!fs.existsSync(controllerDir)) {
-        fs.mkdirSync(controllerDir);
+        fs.mkdirSync(controllerDir, { recursive: true });
     }
     genFileFromTemplate(fileCategoryName, templateFile, destinationFile, basePackageName, entityName);
 }

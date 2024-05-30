@@ -1,6 +1,6 @@
 {
   "name": "just-gen",
-  "version": "1.0.10",
+  "version": "1.2.0",
   "description": "Tool using npm to generate Controller, Service, Repository, Entity, Dto, Mapper boilerplate for Spring Boot web",
   "main": "index.js",
   "bin": "index.js",
