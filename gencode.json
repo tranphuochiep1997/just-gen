@@ -1,0 +1,5 @@
+{
+    "baseFolder": "./src/main/java/vn/viettel/csdld2/dc",
+    "packageName": "vn.viettel.csdld2.dc",
+    "entityName": "User"
+}
